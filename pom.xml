@@ -5,20 +5,25 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.thenewmotion</groupId>
-        <artifactId>parent_2.10.0-RC2</artifactId>
-        <version>2.0-SNAPSHOT</version>
+        <groupId>ua.t3hnar</groupId>
+        <artifactId>scala-parent-pom_2.10</artifactId>
+        <version>2.0</version>
     </parent>
 
     <groupId>com.thenewmotion.chargenetwork</groupId>
-    <artifactId>ocpp-charger_2.10.0-RC2</artifactId>
+    <artifactId>ocpp-charger_2.10</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>OCPP Charger</name>
     <description>Simple ocpp charger simulator</description>
 
+    <scm>
+        <url>https://github.com/thenewmotion/ocpp-charger</url>
+        <connection>scm:git:ssh://git@github.com/thenewmotion/ocpp-charger.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/thenewmotion/ocpp-charger.git</developerConnection>
+    </scm>
 
     <properties>
-        <akka.version>2.1.0-RC2</akka.version>
+        <akka.version>2.1.0</akka.version>
     </properties>
 
     <repositories>
@@ -44,12 +49,12 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>ocpp_${scala.version}</artifactId>
-            <version>3.0-SNAPSHOT</version>
+            <version>3.0</version>
         </dependency>
         <dependency>
             <groupId>com.thenewmotion</groupId>
             <artifactId>time_${scala.version}</artifactId>
-            <version>2.0-SNAPSHOT</version>
+            <version>2.0</version>
         </dependency>
         <dependency>
             <groupId>com.typesafe.akka</groupId>
@@ -82,16 +87,6 @@
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.12</version>
-                <configuration>
-                    <includes>
-                        <include>**/*Spec.class</include>
-                    </includes>
-                </configuration>
             </plugin>
         </plugins>
     </build>
