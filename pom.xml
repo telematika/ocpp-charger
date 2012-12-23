@@ -29,7 +29,7 @@
     <repositories>
         <repository>
             <id>thenewmotion</id>
-            <url>http://nexus.thenewmotion.com/content/groups/general</url>
+            <url>http://nexus.thenewmotion.com/content/groups/public/</url>
         </repository>
     </repositories>
 
